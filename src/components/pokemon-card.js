@@ -3,11 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Color } from "../functions/functions";
 
 export const PokemonCard = ({ pokemon }) => {
-  // let src = `https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${
-  //   pokemon.id
-  // }-min.png`;
-
-  let src = `https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name.toLowerCase()}.gif`;
+  let src = `https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${
+    pokemon.id
+  }-min.png`;
 
   let trainerHeight = h => {
     if (h < 15) {
@@ -44,18 +42,13 @@ export const PokemonCard = ({ pokemon }) => {
         />
       </div>
 
-      <div
+      <img
         className="poke-type"
-        style={{ background: `${Color(pokemon.type)}` }}
-      >
-        <img
-          alt="pokemon-type"
-          src={`https://res.cloudinary.com/baudelaire/image/upload/v1594948123/pokemon/types/${
-            pokemon.type
-          }.png`}
-        />
-        {pokemon.type}
-      </div>
+        alt="pokemon-type"
+        src={`https://res.cloudinary.com/baudelaire/image/upload/v1594948123/pokemon/types/${
+          pokemon.type
+        }.png`}
+      />
 
       <div className="poke-stats">
         {[
