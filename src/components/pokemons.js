@@ -3,19 +3,6 @@ import React, { useState, useEffect } from "react";
 import { IO } from "../functions/IO";
 
 export const Pokemons = ({ pokedex, setPokemon, pokemon, type }) => {
-  // const [filtered,setFiltered]=useState([])
-
-  // useEffect(()=>{
-  // setFiltered(pokedex)
-  // },[])
-
-  // useEffect(()=>{
-  // if(type){
-  //   let filter=pokedex.filter(p=>p.type===type)
-  //   setFiltered(filter)
-  // }
-  // },[type])
-
   let filtered = () => {
     if (type) {
       return pokedex.filter(p => p.type === type);
@@ -29,13 +16,13 @@ export const Pokemons = ({ pokedex, setPokemon, pokemon, type }) => {
     targets.forEach(IO);
   });
 
-  // useEffect(() => {
-  //   if (pokemon) {
-  //     document
-  //       .getElementById(pokemon.name)
-  //       .scrollIntoView({ behavior: "smooth", block: "center" });
-  //   }
-  // }, [pokemon]);
+  useEffect(() => {
+    if (pokemon) {
+      document
+        .getElementById(pokemon.name)
+        .scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [pokemon]);
 
   return (
     <div id="pokemons">
