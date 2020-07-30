@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Color } from "../functions/functions";
+import React from "react";
 
 let types = [
   "bug",
@@ -19,39 +18,21 @@ let types = [
   "ghost"
 ];
 
-export const BottomBar = ({ pokemon, type, setType }) => {
-  const [speech, setSpeech] = useState(false);
-  useEffect(() => {
-    if (type) {
-      document
-        .getElementById(type)
-        .scrollIntoView({ behavior: "smooth", inline: "center" });
-    }
-  }, [type]);
+let habitats = [
+  "grassland",
+  "mountain",
+  "waters-edge",
+  "forest",
+  "rough-terrain",
+  "cave",
+  "urban",
+  "sea",
+  "rare"
+];
 
-  useEffect(() => {
-    setSpeech(false);
-  }, [pokemon]);
-
+export const BottomBar = ({ pokemon, type, setType, habitat, setHabitat }) => {
   return (
     <div id="bottom-bar">
-      <div
-        className={`info-button ${speech ? "animate" : ""}`}
-        onClick={() => {
-          window.speechSynthesis.cancel();
-          const utterance = new SpeechSynthesisUtterance(pokemon.info);
-          utterance.pitch = 0.4;
-          utterance.rate = 1;
-          utterance.onstart = () => {
-            setSpeech(true);
-          };
-          utterance.onend = () => {
-            setSpeech(false);
-          };
-          window.speechSynthesis.speak(utterance);
-        }}
-      />
-
       <div className="poke-types">
         {types.map(t => (
           <div
@@ -71,6 +52,29 @@ export const BottomBar = ({ pokemon, type, setType }) => {
               src={`https://res.cloudinary.com/baudelaire/image/upload/v1594948123/pokemon/types/${t}.png`}
             />
             {t}
+          </div>
+        ))}
+      </div>
+      <div className="habitats">
+        {habitats.map(h => (
+          <div
+            className={`habitat transition ${habitat === h ? "selected" : ""}`}
+            key={h}
+            onClick={() => {
+              if (habitat === h) {
+                setHabitat(null);
+              } else {
+                setHabitat(h);
+              }
+            }}
+          >
+            <div
+              alt="habitat"
+              style={{
+                backgroundImage: `url(https://res.cloudinary.com/baudelaire/image/upload/v1596057662/pokemon/habitat/${h}.png)`
+              }}
+            />
+            {h}
           </div>
         ))}
       </div>

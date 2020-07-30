@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 
 import { IO } from "../functions/IO";
 
-export const Pokemons = ({ pokedex, setPokemon, pokemon, type }) => {
+export const Pokemons = ({ pokedex, setPokemon, pokemon, type, habitat }) => {
   let filtered = () => {
+    let f = pokedex;
     if (type) {
-      return pokedex.filter(p => p.type === type);
-    } else {
-      return pokedex;
+      f = f.filter(p => p.type === type);
     }
+    if (habitat) {
+      f = f.filter(p => p.habitat === habitat);
+    }
+
+    return f;
   };
 
   useEffect(() => {
@@ -16,16 +20,9 @@ export const Pokemons = ({ pokedex, setPokemon, pokemon, type }) => {
     targets.forEach(IO);
   });
 
-  useEffect(() => {
-    if (pokemon) {
-      document
-        .getElementById(pokemon.name)
-        .scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  }, [pokemon]);
-
   return (
     <div id="pokemons">
+      {filtered().length === 0 && <div className="empty">?</div>}
       {filtered().map(p => (
         <div
           className={`pokemon transition ${
@@ -34,7 +31,6 @@ export const Pokemons = ({ pokedex, setPokemon, pokemon, type }) => {
           key={p.id}
           id={p.name}
           onClick={() => {
-            window.speechSynthesis.cancel();
             setPokemon(p);
           }}
           style={{
