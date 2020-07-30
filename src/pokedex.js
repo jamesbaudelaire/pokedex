@@ -1200,7 +1200,7 @@ export const Pokedex = [
     height: 16
   },
   {
-    habitat: "rough-terrain",
+    habitat: "urban",
     info:
       "Uses anti-gravity\nto stay suspended.\nAppears without\fwarning and uses\nTHUNDER WAVE and\nsimilar moves.",
     name: "Magnemite",
@@ -1215,7 +1215,7 @@ export const Pokedex = [
     height: 3
   },
   {
-    habitat: "rough-terrain",
+    habitat: "urban",
     info:
       "Formed by several\nMAGNEMITEs linked\ntogether. They\ffrequently appear\nwhen sunspots\nflare up.",
     name: "Magneton",
@@ -1945,7 +1945,7 @@ export const Pokedex = [
     "special-attack": 60,
     defense: 79,
     attack: 125,
-    type: "dragon",
+    type: "water",
     hp: 95,
     height: 23
   },
@@ -2220,7 +2220,7 @@ export const Pokedex = [
     height: 18
   },
   {
-    habitat: "waters-edge",
+    habitat: "rare",
     info:
       "It is said that this Pokémon constantly flies over the immense seas and rescues drowning people.",
     name: "Dragonite",

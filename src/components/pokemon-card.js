@@ -20,8 +20,23 @@ export const PokemonCard = ({ pokemon }) => {
     return Math.round((v / 250) * 200);
   };
 
+  let invertHex = hex => {
+    return (Number(`0x1${hex}`) ^ 0xffffff)
+      .toString(16)
+      .substr(1)
+      .toUpperCase();
+  };
+
+  let background = () => {
+    return invertHex(Color(pokemon.type));
+  };
+
   return (
-    <div id="poke-card" className="transition">
+    <div
+      id="poke-card"
+      className="transition"
+      style={{ background: `#${background()}` }}
+    >
       <img className="selected-poke" alt="pokemon" src={src} />
 
       <div className="poke-name">{pokemon.name}</div>
@@ -70,6 +85,16 @@ export const PokemonCard = ({ pokemon }) => {
           </div>
         ))}
       </div>
+
+      <div
+        alt="habitat"
+        className="habitat"
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/baudelaire/image/upload/v1596057662/pokemon/habitat/${
+            pokemon.habitat
+          }.png)`
+        }}
+      />
     </div>
   );
 };

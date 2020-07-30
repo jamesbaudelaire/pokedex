@@ -1,9 +1,11 @@
 :root{
   --font-primary: 'Ubuntu', cursive;
 --font-secondary: 'Lato', sans-serif;
---shadow: 0 2px 10px rgba(0,0,0,.5);
 --theme:#304ffe;
---inset: inset 0px 0px 10px 0px rgb(0, 0, 0, 1);
+--shadow:0px 5px 20px 0 rgba(0,0,0,.5);
+--inset: 
+inset 0px 0px 10px 0px rgb(0, 0, 0, 1)
+;
 
 }
 
@@ -39,6 +41,7 @@
 
 
 #pokemons{
+min-width: 70px;
   margin: 20px;
 display: inline-block;position: absolute;
 height:calc(100% - 180px);
@@ -62,24 +65,27 @@ margin:10px;
       filter:brightness(0);
     }
   }
-  
+
+  .empty{
+    text-align: center;
+    font-size: 40px;
+    margin:20px;
+  }
 
 }
 
  
 
-#poke-card{
-  box-shadow:var(--shadow);
-  border-radius: 20px;
-  width:calc(100% - 130px);
-  height: calc(100% - 185px);
+#poke-card{  border-radius: 20px;
+  width:calc(100% - 140px);
+  height: calc(100% - 190px);
   background:rgb(240,240,240);
-
-  position: absolute;top:0;right:0;margin:20px;
+  box-shadow: var(--shadow);
+  position: absolute;top:0px;right:0px;margin:20px;
   .selected-poke{
     height:160px;
-    margin:30px;
-    margin-top:60px;
+    margin-left:30px;
+    margin-top:50px;
     display: block;
     image-rendering: pixelated;
   }
@@ -95,7 +101,7 @@ margin:10px;
   transform: scale(.8);
   width: 80px;;
   position: absolute;
-  top:180px;
+  top:140px;
   right:15px;
   display: flex;
   align-items: flex-end;
@@ -103,6 +109,17 @@ margin:10px;
   .poke-thumb,.poke-trainer{
 filter:brightness(0);
   }
+}
+
+.habitat{
+  height:40px;width:40px;
+  position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    border-radius: 50%;
+    background: white;
+    background: center ;
 }
 
 .poke-type{
@@ -130,7 +147,7 @@ border-radius: 50%;
 
   div{
     height:100%;
-    background:#2196f3;
+    background:#00c853;
   }
 }
 }
@@ -140,67 +157,12 @@ border-radius: 50%;
 
 #bottom-bar{
   width:100%;
-  height: 150px;
   position: absolute;
-  bottom:0;left:0;
-
-  .info-button{
-    cursor: pointer;
-    height: 40px;width: 40px;
-    background: #2196f3;
-    border-radius: 50%;
-    position: absolute;left:0;right: 0;
-    margin:25px auto;
-    position: absolute;left:0;bottom:0;
-    box-shadow: var(--inset),
-    0 0px 5px 5px rgba(255,255,255,1),
-    0 0px 0px 6px rgba(0, 0, 0, 1);
-    &.animate{
-      animation: animate linear .7s infinite alternate;
-    }
-  }
-}
-@keyframes animate {
-      to{
-        background: white;
-      }
+  bottom:0;left:0;  
 }
 
 
 
-.poke-types{
-  width:calc(100% - 20px);
-  margin: 10px;
-box-shadow: var(--inset);
-border-radius: 30px;
-  white-space: nowrap;
-  overflow-x: scroll;
-
-  .poke-type{
-    cursor: pointer;
-    box-shadow:var(--shadow);
-    margin:10px;padding: 5px 10px;
-    display:inline-block;
-    border-radius: 20px;
-  text-transform: uppercase;
-  font-size:14px;
-  line-height: 18px;
-  height: 18px;
-  position: relative;
-  padding-left: 28px;
-  img{
-    position: absolute;
-    height: 18px;
-    left:0;margin-left: 5px;
-  }
-  background:rgb(240,240,240);
-  &.selected{
-  background:black;
-  color:white;
-  }
-  }
-
-}
 
 .loading-pokeball{
   position: absolute;top:0;left:0;bottom:0;right:0;margin: auto;
@@ -213,37 +175,38 @@ border-radius: 30px;
 }
 }
 
+
+
 @media screen and (min-width: 1000px) {
 
   #bottom-bar{
-    height:0;
-.info-button{
-  top: 20px;
-  margin: 0;
-  left:20px;
-  right: auto;
-    position: fixed;
-}
-.poke-types{
-  position: fixed;
-  top: 10px;
-  left: 440px;
-  max-width: 300px;
-  height: auto;
+
+    max-width: 300px;
+    height: calc(100% - 40px);
+    left: 105px;
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 480px);
+    max-width:340px;
+
+.poke-types,.habitats{
   white-space: normal;
-  padding: 20px;
+  padding: 10px;
+    box-sizing: border-box;
 }
   }
 
   #poke-card{
-    max-width: 300px;
-    left: 100px;
+    left: 440px;
     max-height: 500px;
+    max-width: 300px;
+    top:10px;
   }
 
  #pokemons{
-  bottom: 0;
-  height: calc(100% - 100px);
+  top: 0;
+  margin: 30px 20px;
+  height: calc(100% - 60px);
  }
 
 }
