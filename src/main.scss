@@ -70,6 +70,7 @@ margin:10px;
     text-align: center;
     font-size: 40px;
     margin:20px;
+    color:white;
   }
 
 }
@@ -84,7 +85,7 @@ margin:10px;
   position: absolute;top:0px;right:0px;margin:20px;
   .selected-poke{
     height:160px;
-    margin-left:30px;
+    margin-left:20px;
     margin-top:50px;
     display: block;
     image-rendering: pixelated;
@@ -101,7 +102,7 @@ margin:10px;
   transform: scale(.8);
   width: 80px;;
   position: absolute;
-  top:140px;
+  top:160px;
   right:15px;
   display: flex;
   align-items: flex-end;
@@ -147,7 +148,7 @@ border-radius: 50%;
 
   div{
     height:100%;
-    background:#00c853;
+    background:white;
   }
 }
 }
@@ -180,14 +181,12 @@ border-radius: 50%;
 @media screen and (min-width: 1000px) {
 
   #bottom-bar{
-
-    max-width: 300px;
+    left: 440px;
     height: calc(100% - 40px);
-    left: 105px;
     position: absolute;
     top: 10px;
     width: calc(100% - 480px);
-    max-width:340px;
+    max-width:500px;
 
 .poke-types,.habitats{
   white-space: normal;
@@ -197,7 +196,7 @@ border-radius: 50%;
   }
 
   #poke-card{
-    left: 440px;
+    left: 105px;
     max-height: 500px;
     max-width: 300px;
     top:10px;

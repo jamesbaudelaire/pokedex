@@ -1,4 +1,8 @@
 
+#bottom-bar{
+  color:white;
+}
+
 .poke-types{
   width:calc(100% - 40px);
   margin: 20px;
@@ -9,9 +13,8 @@ border-radius: 30px;
 
   .poke-type{
     cursor: pointer;
-    box-shadow:var(--inset);
     margin:10px;padding: 5px;padding-right: 10px;
-
+    border:2px solid white;
     margin-right:0;
 &:last-child{
   margin-right: 10px;
@@ -29,7 +32,6 @@ border-radius: 30px;
   &.selected{
   background:#00c853;
   box-shadow:none;
-  color:white;
   }
   }
 
@@ -53,7 +55,7 @@ border-radius: 30px;
     padding:5px;
     padding-right: 10px;
     cursor:pointer;
-    box-shadow:var(--inset);
+    border:2px solid white;
     border-radius:20px;
     margin-right:0;
     display: inline-flex;
@@ -66,7 +68,7 @@ border-radius: 30px;
     border-radius:50%;
     display: inline-block;
     background-position:center;
-    height: 15px;width:15px;
+    height: 20px;width:20px;
   }
   &.selected{
     background:#00c853;
