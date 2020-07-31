@@ -51,19 +51,19 @@ export const PokemonCard = ({ pokemon }) => {
         />
         <img
           className="poke-trainer transition"
-          style={{ height: `${trainerHeight(pokemon.height)}px` }}
+          style={{ height: `${trainerHeight(pokemon.height + 1)}px` }}
           alt="trainer"
-          src="https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/trainer.png"
+          src="https://res.cloudinary.com/baudelaire/image/upload/w_100/v1596161976/pokemon/trainer.png"
         />
       </div>
 
-      <img
+      {/* <img
         className="poke-type"
         alt="pokemon-type"
         src={`https://res.cloudinary.com/baudelaire/image/upload/v1594948123/pokemon/types/${
           pokemon.type
         }.png`}
-      />
+      /> */}
 
       <div className="poke-stats">
         {[
@@ -86,7 +86,7 @@ export const PokemonCard = ({ pokemon }) => {
         ))}
       </div>
 
-      <div
+      {/* <div
         alt="habitat"
         className="habitat"
         style={{
@@ -94,7 +94,7 @@ export const PokemonCard = ({ pokemon }) => {
             pokemon.habitat
           }.png)`
         }}
-      />
+      /> */}
     </div>
   );
 };
