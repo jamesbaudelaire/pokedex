@@ -1,10 +1,11 @@
 
+
 #bottom-bar{
-  color:white;
+  width:calc(100% - 70px);
+position: absolute;right:0;bottom:0;
 }
 
 .poke-types{
-  width:calc(100% - 40px);
   margin: 20px;
 box-shadow: var(--inset);
 border-radius: 30px;
@@ -14,7 +15,7 @@ border-radius: 30px;
   .poke-type{
     cursor: pointer;
     margin:10px;padding: 5px;padding-right: 10px;
-    border:2px solid white;
+    background: white;
     margin-right:0;
 &:last-child{
   margin-right: 10px;
@@ -32,6 +33,7 @@ border-radius: 30px;
   &.selected{
   background:#00c853;
   box-shadow:none;
+  color: white;
   }
   }
 
@@ -55,7 +57,7 @@ border-radius: 30px;
     padding:5px;
     padding-right: 10px;
     cursor:pointer;
-    border:2px solid white;
+    background: white;
     border-radius:20px;
     margin-right:0;
     display: inline-flex;

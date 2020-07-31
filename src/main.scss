@@ -41,14 +41,14 @@ inset 0px 0px 10px 0px rgb(0, 0, 0, 1)
 
 
 #pokemons{
-min-width: 70px;
-  margin: 20px;
-display: inline-block;position: absolute;
-height:calc(100% - 180px);
-overflow: scroll;
-box-shadow:var(--inset);
-border-radius:50px;
-
+    min-width: 70px;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    overflow: scroll;
+    box-shadow: var(--inset);
+    border-radius: 0 30px 30px 0;
   .pokemon{
     cursor: pointer;
     width:50px;height:50px;
@@ -78,20 +78,21 @@ margin:10px;
  
 
 #poke-card{  border-radius: 20px;
-  width:calc(100% - 140px);
+  border:7px solid white;
+  box-sizing: border-box;
+  width:calc(100% - 110px);
   height: calc(100% - 190px);
   background:rgb(240,240,240);
   box-shadow: var(--shadow);
   position: absolute;top:0px;right:0px;margin:20px;
   .selected-poke{
     height:160px;
-    margin-left:20px;
-    margin-top:50px;
+    margin:10px;
     display: block;
     image-rendering: pixelated;
   }
 .poke-name{
-  position: absolute;top:0;left: 0;
+  position: absolute;top:0;right: 0;
   margin:10px 15px;
   font-size: 24px;
   font-weight: bold;
@@ -102,13 +103,16 @@ margin:10px;
   transform: scale(.8);
   width: 80px;;
   position: absolute;
-  top:160px;
-  right:15px;
+  top:120px;
+  right:20px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   .poke-thumb,.poke-trainer{
 filter:brightness(0);
+  }
+  .poke-trainer{
+    margin-left:10px;
   }
 }
 
@@ -130,19 +134,19 @@ border-radius: 50%;
 }
 
 .poke-stats{
-  position: absolute;bottom:0;left:0;margin: 10px;
+  position: absolute;bottom:20px;left:0x;
   .stat{
-    margin: 10px;
-    
+    margin: 10px 0px;
   }
   .stat-name{
+    text-align: right;
   text-transform: uppercase;
   }
 .stat-val{
   width:140px;
-  border-radius: 50px 10px;
+  border-radius:0 0px 10px 0;
   background: black;
-  height:10px;
+  height:7px;
   overflow: hidden;
   margin-top:3px;
 
@@ -155,12 +159,6 @@ border-radius: 50%;
 
 }
 
-
-#bottom-bar{
-  width:100%;
-  position: absolute;
-  bottom:0;left:0;  
-}
 
 
 
@@ -181,12 +179,10 @@ border-radius: 50%;
 @media screen and (min-width: 1000px) {
 
   #bottom-bar{
-    left: 440px;
-    height: calc(100% - 40px);
+    left: 390px;
     position: absolute;
+    max-width: calc(100% - 400px);
     top: 10px;
-    width: calc(100% - 480px);
-    max-width:500px;
 
 .poke-types,.habitats{
   white-space: normal;
@@ -196,16 +192,10 @@ border-radius: 50%;
   }
 
   #poke-card{
-    left: 105px;
+    left: 80px;
     max-height: 500px;
-    max-width: 300px;
+    max-width: 280px;
     top:10px;
   }
-
- #pokemons{
-  top: 0;
-  margin: 30px 20px;
-  height: calc(100% - 60px);
- }
 
 }

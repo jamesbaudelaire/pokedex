@@ -27,7 +27,7 @@ export const Pokedex = [
     attack: 62,
     type: "grass",
     hp: 60,
-    height: 10
+    height: 18
   },
   {
     habitat: "grassland",
@@ -72,7 +72,7 @@ export const Pokedex = [
     attack: 64,
     type: "fire",
     hp: 58,
-    height: 11
+    height: 18
   },
   {
     habitat: "mountain",
@@ -117,7 +117,7 @@ export const Pokedex = [
     attack: 63,
     type: "water",
     hp: 59,
-    height: 10
+    height: 18
   },
   {
     habitat: "waters-edge",
@@ -162,7 +162,7 @@ export const Pokedex = [
     attack: 20,
     hp: 50,
     type: "bug",
-    height: 7
+    height: 18
   },
   {
     habitat: "forest",
@@ -207,7 +207,7 @@ export const Pokedex = [
     attack: 25,
     hp: 45,
     type: "bug",
-    height: 6
+    height: 18
   },
   {
     habitat: "forest",
@@ -252,7 +252,7 @@ export const Pokedex = [
     attack: 60,
     hp: 63,
     type: "flying",
-    height: 11
+    height: 18
   },
   {
     habitat: "forest",
@@ -267,7 +267,7 @@ export const Pokedex = [
     attack: 80,
     type: "flying",
     hp: 83,
-    height: 18
+    height: 21
   },
   {
     habitat: "grassland",
@@ -327,7 +327,7 @@ export const Pokedex = [
     attack: 90,
     type: "flying",
     hp: 65,
-    height: 18
+    height: 21
   },
   {
     habitat: "grassland",
@@ -417,7 +417,7 @@ export const Pokedex = [
     type: "ground",
     attack: 100,
     hp: 75,
-    height: 10
+    height: 18
   },
   {
     habitat: "grassland",
@@ -447,7 +447,7 @@ export const Pokedex = [
     type: "normal",
     attack: 62,
     hp: 70,
-    height: 8
+    height: 18
   },
   {
     habitat: "grassland",
@@ -492,7 +492,7 @@ export const Pokedex = [
     attack: 72,
     type: "normal",
     hp: 61,
-    height: 9
+    height: 18
   },
   {
     habitat: "grassland",
@@ -537,7 +537,7 @@ export const Pokedex = [
     attack: 70,
     type: "normal",
     hp: 95,
-    height: 13
+    height: 18
   },
   {
     habitat: "grassland",
@@ -567,7 +567,7 @@ export const Pokedex = [
     attack: 76,
     type: "fire",
     hp: 73,
-    height: 11
+    height: 18
   },
   {
     habitat: "grassland",
@@ -1422,7 +1422,7 @@ export const Pokedex = [
     attack: 45,
     type: "rock",
     hp: 35,
-    height: 25
+    height: 23
   },
   {
     habitat: "grassland",
@@ -1692,7 +1692,7 @@ export const Pokedex = [
     attack: 5,
     type: "normal",
     hp: 250,
-    height: 11
+    height: 18
   },
   {
     habitat: "grassland",
@@ -1827,7 +1827,7 @@ export const Pokedex = [
     attack: 45,
     type: "psychic",
     hp: 40,
-    height: 13
+    height: 18
   },
   {
     habitat: "grassland",
@@ -1842,7 +1842,7 @@ export const Pokedex = [
     attack: 110,
     type: "bug",
     hp: 70,
-    height: 15
+    height: 18
   },
   {
     habitat: "urban",
