@@ -20,7 +20,6 @@ inset 0px 0px 10px 0px rgb(0, 0, 0, 1)
   body{
     overscroll-behavior: contain;
     margin:0;
-    user-select:none;
     font-family: var(--font-primary); 
     background: #d50000;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -48,7 +47,7 @@ inset 0px 0px 10px 0px rgb(0, 0, 0, 1)
     height: 100%;
     overflow: scroll;
     box-shadow: var(--inset);
-    border-radius: 0 30px 30px 0;
+    border-radius: 0 40px 40px 0;
   .pokemon{
     cursor: pointer;
     width:50px;height:50px;
@@ -87,7 +86,7 @@ margin:10px;
   position: absolute;top:0px;right:0px;margin:20px;
   .selected-poke{
     height:160px;
-    margin:10px;
+    margin:20px 10px;
     display: block;
     image-rendering: pixelated;
   }
