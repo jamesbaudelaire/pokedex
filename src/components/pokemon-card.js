@@ -3,11 +3,9 @@ import React, { useState, useEffect } from "react";
 import { Color } from "../functions/functions";
 
 export const PokemonCard = ({ pokemon }) => {
-  let src = `https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${
-    pokemon.id
-  }-min.png`;
+  let src = `https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${pokemon.id}-min.png`;
 
-  let trainerHeight = h => {
+  let trainerHeight = (h) => {
     if (h < 15) {
       return 90;
     }
@@ -16,19 +14,12 @@ export const PokemonCard = ({ pokemon }) => {
     }
   };
 
-  let statWidth = v => {
+  let statWidth = (v) => {
     return Math.round((v / 250) * 200);
   };
 
-  let invertHex = hex => {
-    return (Number(`0x1${hex}`) ^ 0xffffff)
-      .toString(16)
-      .substr(1)
-      .toUpperCase();
-  };
-
   let background = () => {
-    return invertHex(Color(pokemon.type));
+    return Color(pokemon.type);
   };
 
   return (
@@ -45,9 +36,7 @@ export const PokemonCard = ({ pokemon }) => {
         <img
           className="poke-thumb"
           alt="pokemon"
-          src={`https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${
-            pokemon.id
-          }-min.png`}
+          src={`https://res.cloudinary.com/baudelaire/image/upload/v1594858651/pokemon/${pokemon.id}-min.png`}
         />
         <img
           className="poke-trainer transition"
@@ -57,14 +46,6 @@ export const PokemonCard = ({ pokemon }) => {
         />
       </div>
 
-      {/* <img
-        className="poke-type"
-        alt="pokemon-type"
-        src={`https://res.cloudinary.com/baudelaire/image/upload/v1594948123/pokemon/types/${
-          pokemon.type
-        }.png`}
-      /> */}
-
       <div className="poke-stats">
         {[
           "hp",
@@ -73,7 +54,7 @@ export const PokemonCard = ({ pokemon }) => {
           "special-attack",
           "special-defense",
           "speed"
-        ].map(stat => (
+        ].map((stat) => (
           <div className="stat" key={stat}>
             <div className="stat-name">{stat}</div>
             <div className="stat-val">
@@ -85,16 +66,6 @@ export const PokemonCard = ({ pokemon }) => {
           </div>
         ))}
       </div>
-
-      {/* <div
-        alt="habitat"
-        className="habitat"
-        style={{
-          backgroundImage: `url(https://res.cloudinary.com/baudelaire/image/upload/v1596057662/pokemon/habitat/${
-            pokemon.habitat
-          }.png)`
-        }}
-      /> */}
     </div>
   );
 };
