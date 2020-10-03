@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../styles/poke-stats.scss";
 
 import { Color } from "../functions/functions";
 
@@ -47,24 +48,19 @@ export const PokemonCard = ({ pokemon }) => {
       </div>
 
       <div className="poke-stats">
-        {[
-          "hp",
-          "attack",
-          "defense",
-          "special-attack",
-          "special-defense",
-          "speed"
-        ].map((stat) => (
-          <div className="stat" key={stat}>
-            <div className="stat-name">{stat}</div>
-            <div className="stat-val">
-              <div
-                style={{ width: statWidth(pokemon[stat]) }}
-                className="transition"
-              />
+        {["hp", "attack", "defense", "s-attack", "s-defense", "speed"].map(
+          (stat) => (
+            <div className="stat" key={stat}>
+              <div className="stat-name">{stat}</div>
+              <div className="stat-val">
+                <div
+                  style={{ width: statWidth(pokemon[stat]) }}
+                  className="transition"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </div>
   );

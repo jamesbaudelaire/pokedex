@@ -1,0 +1,27 @@
+
+.poke-stats{
+  transform: scale(.8);
+  position: absolute;bottom:-10px;left:-22px;
+  .stat{
+    margin: 10px 0px;
+  }
+  .stat-name{
+    font-size: 20px;
+    color:white;
+    text-align: right;
+  text-transform: uppercase;
+  }
+.stat-val{
+  width:150px;
+  border-radius:0 0px 10px 0;
+  background: black;
+  height:10px;
+  overflow: hidden;
+  margin-top:3px;
+
+  div{
+    height:100%;
+    background:white;
+  }
+}
+}
